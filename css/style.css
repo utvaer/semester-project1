@@ -14,7 +14,7 @@ body {
   padding: 0;
   font-family: "mr-eaves-xl-modern", sans-serif;
   color: #ddd;
-  background-color: #293d4a;
+  background-color: rgba(41, 61, 74, 0.8);
   width: 100%;
 }
 header a {
@@ -40,7 +40,8 @@ header p {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "ff-dax-pro", sans-serif;
 }
 h1 {
@@ -48,6 +49,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
+/*____TOP NAV ___*/
 ul {
   list-style: none;
   padding-left: 0;
@@ -63,19 +65,11 @@ a {
 a:visited {
   color: #293d4a;
 }
-footer {
-  color: #293d4a;
-  background-color: #ddd;
-  overflow: hidden;
-}
-hr {
-  border-top: 0.1em solid #293d4a;
-  width: 50%;
-}
 .active {
   text-transform: uppercase;
   text-decoration: underline;
 }
+/*____CLASSES ACCROSS SITE ___*/
 .home-banner,
 .exhibits-banner,
 .explore-banner,
@@ -97,12 +91,27 @@ hr {
   margin: 10% 0 15% 0;
   clear: both;
 }
-.footer-time {
-  padding: 0.5em;
-  margin: 1em auto;
-}
-.footer-general {
+/*____FOOTER ___*/
+
+.footer {
+  color: #293d4a;
+  background-color: rgba(221, 221, 221, 0.9);
+  overflow: hidden;
   display: flex;
+  flex-direction: row;
+}
+.footer h4 {
+  font-weight: bolder;
+  display: inline-block;
+}
+.footer-time,
+.footer-contact,
+.footer-additional {
+  flex-grow: 1;
+}
+
+.fab {
+  margin-right: 1em;
 }
 
 /* ------------------------------ GENERAL HOME ----------------------------------*/
@@ -213,7 +222,7 @@ blockquote {
 }
 .exhibit-title {
   background-color: #ddd;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .exhibition h2 {
   font-size: 1em;
@@ -298,7 +307,7 @@ blockquote {
 .info-item-3,
 .info-item-4 {
   padding: 0.5em;
-  margin: 0 2em;
+  margin: 0;
 }
 .info-item-1,
 .info-item-3 {
@@ -322,7 +331,7 @@ blockquote {
 }
 #directions {
   max-width: 50%;
-  margin: 2em auto;
+  margin: 2em 0 2em 2em;
   font-size: 1.2em;
   text-decoration: underline;
 }
@@ -338,8 +347,7 @@ blockquote {
   margin: 40px 0;
   color: #ddd;
 }
-.updates,
-.updates-2 {
+.updates {
   display: flex;
   max-width: 80%;
   margin: 0 auto;
@@ -350,6 +358,8 @@ blockquote {
   background-color: #ddd;
   padding: 1em;
   margin-bottom: 1em;
+  border-radius: 4px;
+  height: 50vh;
 }
 .event h2 {
   text-transform: uppercase;
@@ -359,13 +369,8 @@ blockquote {
 form {
   max-width: 80%;
   margin: 0 auto;
-  padding-top: 5%;
-}
-legend {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 5px 0;
-  margin-bottom: 5%;
+  color: rgb(41, 61, 74);
+  font-size: 1.5em;
 }
 input,
 textarea {
@@ -378,18 +383,15 @@ textarea {
 .contact-banner {
   background-image: url(../images/search.jpg);
 }
-.contact-us {
-  color: #293d4a;
-  background-color: #f9b8ff;
-}
 .details {
   border: 0px;
   display: block;
+  background-color: rgba(249, 184, 255, 0.6);
 }
 .form__input {
   display: block;
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
   padding: 16px;
   border: none;
   border-radius: 4px;
@@ -400,14 +402,15 @@ textarea {
   background-color: #f9b8ff;
   color: #293d4a;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1em;
-  padding: 0.5em 4em;
-  border-radius: 8px;
-  margin-left: 60%;
-  margin-bottom: 10%;
+  padding: 0.5em 3em;
   border: 1px solid #f9b8ff;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(248, 246, 246, 0.4);
+  box-shadow: 2px 2px 4px rgba(248, 246, 246, 0.2);
+  display: block;
+  margin: 2em auto;
+  cursor: pointer;
 }
 
 /* ------------------------------ MOBILE ----------------------------------*/
@@ -415,6 +418,9 @@ textarea {
 @media only screen and (max-width: 710px) {
   .fas .fa-bars {
     display: block;
+  }
+  .fa-bars {
+    float: right;
   }
   .main-nav,
   #hamburger-menu {
@@ -428,7 +434,6 @@ textarea {
     font-size: 1.7em;
   }
   .hamburger-label {
-    float: right;
     color: #ddd;
     padding: 10px;
     font-size: 2em;
@@ -437,21 +442,37 @@ textarea {
   #hamburger-menu:checked ~ nav {
     display: block;
   }
-  .footer-time {
-    max-width: 80%;
+  .logo {
+    display: block;
+    font-size: larger;
+    text-transform: uppercase;
   }
-  .footer-general {
+  .top-nav {
+    background-color: #293d4a;
+    padding: 2em;
+  }
+  .footer {
     flex-direction: column;
-    width: 30%;
-    margin: 0 auto;
   }
-  .footer-contact {
-    padding: 1em 0;
+  .footer-time,
+  .footer-contact,
+  .footer-additional {
+    margin: 0.5em auto;
+    border-top: 1px solid #293d4a;
   }
+  .footer-adr,
+  .footer-email,
+  .footer-social {
+    padding-bottom: 0.5em;
+  }
+
   /* ------------------------------ MOBILE HOME ----------------------------------*/
   .home-buttons {
     flex-direction: column;
     justify-content: space-evenly;
+  }
+  .home-banner p {
+    display: none;
   }
   /* ------------------------------ MOBILE EXHIBITS ----------------------------------*/
   .exhibition {
@@ -483,15 +504,19 @@ textarea {
 /* ------------------------------ DESKTOP  --------------------------------- */
 
 @media only screen and (min-width: 711px) {
+  .logo {
+    display: inline;
+  }
   header input {
     display: none;
   }
   header ul {
-    text-align: left;
+    text-align: right;
     margin: 0;
     padding: 1em;
     overflow: hidden;
     position: fixed;
+    z-index: 1;
     background-color: #293d4a;
     top: 0;
     width: 100%;
@@ -514,16 +539,18 @@ textarea {
   .fa-bars {
     display: none;
   }
-  .footer-time {
-    max-width: 30%;
-    margin: 1em auto;
+  .footer-time,
+  .footer-contact,
+  .footer-additional {
+    margin: 1em 0 0.5em 2em;
+    border-right: 1px solid #293d4a;
   }
-  .footer-general {
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 60%;
-    margin: 1em auto;
+  .footer-adr,
+  .footer-email,
+  .footer-social {
+    padding-bottom: 1em;
   }
+
   /* ------------------------------ DESKTOP HOME ----------------------------------*/
   blockquote {
     max-width: 40%;
@@ -578,7 +605,8 @@ textarea {
     flex-direction: row;
   }
   .explore-2 {
-    max-width: 60%;
+    width: 80%;
+    margin: 0 auto;
   }
   /* ------------------------------ DESKTOP VISIT ----------------------------------*/
   .visit-banner {

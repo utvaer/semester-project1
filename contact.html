@@ -25,55 +25,61 @@
                 </ul>
             </nav>
             <div class="main-title">
-                <h1>Not finding what you're looking for?</h1>
+                <h1>Contact us</h1>
             </div>
         </div>
     </header>
     <main>
-         <form action="form-success.php" method="POST">
+        <form action="form-success.php" method="POST">
             <fieldset class="details">
-                <div class="contact-us">
-                    <legend>Contact us</legend>
-                </div>
-                <label for="name">Your Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" name="name" id="name" class="form__input" required>
-                <label for="email">Your E-mail:</label>
+                <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" class="form__input" required>
                 <label for="subject">Your Message:</label>
-                <textarea name="subject" id="subject" class="form__input" placeholder="Your message.."></textarea>
+                <textarea name="subject" id="subject" class="form__input" placeholder="Type here..."></textarea>
             </fieldset>
             <input type="submit" value="Submit" class="form-button">
         </form>
     </main>
     <footer>
-        <div class="footer-time">
-            <ul>
-                <li>Opening Hours:</li>
-                <li>Tues 10 - 16</li>
-                <li>Wed 10 - 16</li>
-                <li>Thurs 10 -16</li>
-                <li>Fri 10 - 19</li>
-                <li>Sat 9 - 16</li>
-                <li>Sun 9 - 13</li>
-                <li><strong>Monday closed</strong></li>
-            </ul>
-        </div>
-        <hr />
-        <div class="footer-general">
-            <div class="footer-address">
-                <i class="fas fa-map-marker-alt"></i>
-                <address>Find us at:<br><a href="visit.html#directions">Kongens gate 4</a><br>OSLO</address>
+        <div class="footer">
+            <div class="footer-time">
+                <i class="far fa-clock"></i>
+                <h4>Opening hours</h4>
+                <ul>
+                    <li>Tuesday 10 - 16</li>
+                    <li>Wednesday 10 - 16</li>
+                    <li>Thursday 10 -16</li>
+                    <li>Friday 10 - 19</li>
+                    <li>Saturday 9 - 16</li>
+                    <li>Sunday 9 - 13</li>
+                    <li><strong>Monday closed</strong></li>
+                </ul>
             </div>
             <div class="footer-contact">
-                <i class="far fa-envelope"></i>
-                <a href="contact.html">Contact Us</a>
+                <div class="footer-adr">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Find us</h4>
+                    <address><a href="visit.html#directions">Kongens gate 4</a>, OSLO</address>
+                </div>
+                <div class="footer-email">
+                    <i class="far fa-envelope"></i>
+                    <a href="contact.html">Contact Us</a><br>
+                </div>
+                <div class="footer-social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
             </div>
-            <div class="footer-social">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
+            <div class="footer-additional">
+                <h4>Site info</h4>
+                <p>&copy; Utv&aelig;r</p>
+                <a href="">
+                    <p>Terms & Conditions</p>
+                </a>
             </div>
         </div>
-        <p>&copy; Utv&aelig;r</p>
     </footer>
 </body>
 </html>
